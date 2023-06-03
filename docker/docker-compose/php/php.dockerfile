@@ -29,7 +29,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN docker-php-ext-install curl pgsql pdo_pgsql pdo_mysql mbstring exif pcntl bcmath
 
 #=====xdebug
-RUN pecl install xdebug-3.2.0 \
+RUN pecl install xdebug-3.2.1 \
     && docker-php-ext-enable xdebug
 #=====xdebug
 

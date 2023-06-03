@@ -45,7 +45,7 @@ services:
         environment:
             MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-123456789}
             MYSQL_DATABASE: ${DB_DATABASE:-skeleton}
-            MYSQL_USER: ${DB_USERNAME-root}
+            MYSQL_USER: ${DB_USERNAME:-root}
             MYSQL_PASSWORD: ${DB_PASSWORD:-123456789}
         ports:
             - "${DB_PORT:-3306}:${DB_PORT:-3306}"
@@ -60,7 +60,7 @@ services:
     #  db:
     #    image: postgres:13-alpine
     #    restart: unless-stopped
-    #    container_name: ${APP_NAME:postgres}-db
+    #    container_name: ${APP_NAME:-postgres}-db
     #    environment:
     #      POSTGRES_PASSWORD: ${DB_PASSWORD:-123456789}
     #    ports:
